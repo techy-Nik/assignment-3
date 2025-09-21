@@ -98,6 +98,10 @@ in your browser.
 
 ---
 
+Screen Shot of Coverage
+
+![alt text](image.png)
+
 ## 🎯 Learning Outcomes
 
 This project demonstrates:
