@@ -1,5 +1,5 @@
 """
-tests/test_operations.py
+tests/test_operations.py alias name
 
 This module contains unit tests for the Operations class.
 We use parameterized tests with pytest to efficiently test multiple
