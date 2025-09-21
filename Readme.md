@@ -1,75 +1,85 @@
-# 📘 Python Calculator Project with Automated Tests
+# 📘 Calculator Project with Automated Tests
 
 ## 📌 Overview
+This project is a **command-line calculator application in Python** that supports the following arithmetic operations:
 
-This project is a **simple calculator application in Python** that supports basic arithmetic operations using **object-oriented programming principles** (CLO6):
+- ➕ Addition  
+- ➖ Subtraction  
+- ✖️ Multiplication  
+- ➗ Division  
 
-* ➕ Addition
-* ➖ Subtraction
-* ✖️ Multiplication
-* ➗ Division
-
-It includes **automated tests** using `pytest` to ensure functionality and correctness.
+It was developed as part of **Assignment 3** to demonstrate **object-oriented programming principles (CLO6)** in Python.  
+The project also includes **automated unit tests** and a **CI/CD pipeline** with GitHub Actions.
 
 ---
 
 ## 🚀 Features
-
-* Command-line interface (REPL style)
-* Object-oriented design with the `Operations` class
-* Handles negative numbers (e.g., `-5 * -3`)
-* Automated testing with `pytest`
-* Parameterized tests to cover multiple input scenarios efficiently
-* Full code coverage using `pytest-cov`
+- Interactive **REPL-style** command-line interface  
+- Handles **integers, floats, and negative numbers**  
+- Clear error handling (e.g., division by zero)  
+- Automated unit + parameterized tests with `pytest`  
+- Code coverage reports with `pytest-cov`  
+- Continuous Integration with **GitHub Actions**  
 
 ---
 
 ## 🛠️ Project Structure
-
 ```text
-Assigment3/
-│── app/
-│   ├── __init__.py
-│   ├── calculator/          # REPL logic and Operations import
-│   └── operations/          # Operations class (addition, subtraction, multiplication, division)
-├── tests/
-│   ├── __init__.py
-│   ├── test_calculator.py   # Unit tests
-│   └── test_units.py        # Parameterized tests
+assignment-3/
+├── app/
+│   ├── calculator/          # Calculator class (add, subtract, multiply, divide)
+│   └── operations/          # (optional: reusable operation functions)
+├── tests/                   # Unit & parameterized tests
+│   ├── test_calculator.py
+│   └── test_units.py
 ├── main.py                  # REPL entry point
+├── pytest.ini               # Pytest configuration
 ├── requirements.txt         # Project dependencies
-└── pytest.ini               # Pytest configuration
+└── .github/workflows/
+    └── python-app.yml       # GitHub Actions workflow
+```
 
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/techy-Nik/assignment-3.git
+cd assignment-3
+```
+
+### 2️⃣ Create a virtual environment (optional but recommended)
+```bash
+python -m venv venv
+source venv/bin/activate   # On Linux/Mac
+venv\Scripts\activate    # On Windows
+```
+
+### 3️⃣ Install dependencies
+```bash
+pip install -r requirements.txt
 ```
 
 ---
 
 ## ▶️ Usage
-
-Run the calculator:
-
+Run the program:
 ```bash
 python main.py
 ```
 
-Enter expressions like:
-
+Example session:
 ```text
-number operator number
-```
+Simple Calculator (type 'exit' to quit)
+Enter expression (e.g. 2 + 3): 4 * 5
+Result: 20.0
 
-✅ Valid examples:
+Enter expression (e.g. 2 + 3): 10 / 0
+Error: Cannot divide by zero
 
-```text
-5 + 3
--5 * -3
-10 / 2
-```
-
-❌ Invalid (no spaces):
-
-```text
-2+-3
+Enter expression (e.g. 2 + 3): exit
+Goodbye!
 ```
 
 ---
@@ -77,34 +87,42 @@ number operator number
 ## 🧪 Running Tests
 
 Run all tests:
-
 ```bash
-pytest -v tests/
+pytest -v
 ```
 
-Generate a coverage report:
-
+Run tests with coverage:
 ```bash
 pytest --cov=app --cov-report=html
 ```
 
-Then open:
-
+Open the coverage report in your browser:
 ```text
 htmlcov/index.html
 ```
 
-in your browser.
+---
+
+## 🔄 Continuous Integration (CI)
+This project uses **GitHub Actions** for automated testing.  
+On each push, it:  
+- ✅ Runs all unit + parameterized tests  
+- ✅ Verifies code coverage  
+- ✅ Ensures code quality  
+
+👉 Check results here: [GitHub Actions](https://github.com/techy-Nik/assignment-3/actions)
 
 ---
 
-Screen Shot of Coverage
-
-<img width="1468" height="731" alt="image" src="https://github.com/user-attachments/assets/5a3ae490-675d-4944-8c5d-2247a532b72f" />
-
-
 ## 🎯 Learning Outcomes
-
 This project demonstrates:
 
-* ✅ Implementing **object-oriented programming principles** in Python (CLO6)
+- ✅ Implementing **object-oriented programming** in Python (CLO6)  
+- ✅ Writing **unit and parameterized tests** for complete test coverage  
+- ✅ Setting up **Continuous Integration (CI)** with GitHub Actions  
+- ✅ Building an **interactive REPL application** with input validation  
+
+---
+
+## 📜 License
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
