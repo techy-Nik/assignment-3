@@ -100,7 +100,8 @@ in your browser.
 
 Screen Shot of Coverage
 
-![alt text](image.png)
+<img width="1468" height="731" alt="image" src="https://github.com/user-attachments/assets/5a3ae490-675d-4944-8c5d-2247a532b72f" />
+
 
 ## 🎯 Learning Outcomes
 
